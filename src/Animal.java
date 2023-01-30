@@ -2,8 +2,7 @@ import java.util.Date;
 
 public class Animal {
     String name;
-    Date dateB;
-    Env env;
+    Enviroment env;
     Food food;
 
     public String getName() {
@@ -16,19 +15,11 @@ public class Animal {
         }
     }
 
-    public Date getDateB() {
-        return this.dateB;
-    }
-
-    public void setDateB(Date dateB) {
-        this.dateB = dateB;
-    }
-
-    public Env getEnv() {
+    public Enviroment getEnv() {
         return this.env;
     }
 
-    public void setEnv(Env env) {
+    public void setEnv(Enviroment env) {
         this.env = env;
     }
 
@@ -42,14 +33,12 @@ public class Animal {
 
     public Animal() {
         this.name = "SomeAnimal";
-        this.dateB = new Date(2023, 1, 1);
-        this.env = Env.GROUND;
+        this.env = Enviroment.GROUND;
         this.food = Food.MEAT;
     }
 
-    public Animal(String name, Date dateB, Env env, Food food) {
+    public Animal(String name, Enviroment env, Food food) {
         this.name = name;
-        this.dateB = dateB;
         this.env = env;
         this.food = food;
     }
